@@ -7,6 +7,7 @@
 - [DDEV](https://ddev.com)
 
 ## Features
+- Package manager: [lazy.nvim]
 - Xdebug
 
 ## Debugging with [xdebug](https://xdebug.org (sames shortcuts as [vdebug](https://github.com/vim-vdebug/vdebug))
