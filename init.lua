@@ -13,5 +13,5 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Include the options.lua file
-require("config.options")
+require("options")
 require("lazy").setup("plugins")
