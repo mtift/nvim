@@ -6,9 +6,12 @@
 - PHP
 - [DDEV](https://ddev.com)
 
-## Features
-- Package manager: [lazy.nvim]
-- Xdebug
+## Package manager
+- lazy.nvim
+
+## Packages
+- Treesitter
+- Telescope
 
 ## Debugging with [xdebug](https://xdebug.org (sames shortcuts as [vdebug](https://github.com/vim-vdebug/vdebug))
 - `<Space>db`: toggle breakpoint
