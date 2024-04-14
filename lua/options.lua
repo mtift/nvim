@@ -63,4 +63,4 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 })
 
 -- Set the colorscheme (font)
-vim.opt.guifont='JetBrainsMono Nerd Font'
+-- vim.opt.guifont='JetBrainsMono Nerd Font'
