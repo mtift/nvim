@@ -12,16 +12,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- tabs & indentation
-vim.opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
-vim.opt.shiftwidth = 2 -- 2 spaces for indent width
-vim.opt.expandtab = true -- expand tab to spaces
-vim.opt.autoindent = true -- copy indent from current line when starting new one
-
-vim.opt.expandtab = true
-
-vim.g.mapleader = " "
-
-local opts = {}
-
+-- Include the options.lua file
+require("config.options")
 require("lazy").setup("plugins")
