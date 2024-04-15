@@ -7,11 +7,18 @@
 - [DDEV](https://ddev.com)
 
 ## Package manager
-- lazy.nvim
+- Lazy
+
+## LSP (Language Server Protocol)
+- `mason` - Package manager for LSP servers, DAP servers, linters, and formatters
+- `mason-lspconfig` - Bridges mason.nvim with the lspconfig plugin
+- `nvim-lspconfig` - Connects Neovim to the language server
 
 ## Packages
-- Treesitter
+- Lualine
+- Neo-tree
 - Telescope
+- Treesitter
 
 ## Debugging with [xdebug](https://xdebug.org (sames shortcuts as [vdebug](https://github.com/vim-vdebug/vdebug))
 - `<Space>db`: toggle breakpoint

@@ -1,37 +1,38 @@
 vim.cmd("let g:netrw_liststyle = 3")
 
-local opt = vim.opt
-
 -- Show numbers ascending in both directions
-opt.relativenumber = false
-opt.number = true
+vim.opt.relativenumber = false
+vim.opt.number = true
 
-opt.wrap = false
+-- Wrap lines
+vim.opt.wrap = true
+vim.opt.linebreak = true
 
--- search settings
-opt.ignorecase = true -- ignore case when searching
-opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
+-- Ignore case when searching
+vim.opt.ignorecase = true
+-- Assume case-sensitive search with mixed case searches
+vim.opt.smartcase = true
 
-opt.cursorline = false
+vim.opt.cursorline = false
 
--- turn on termguicolors for tokyonight colorscheme to work
--- (have to use iterm2 or any other true color terminal)
-opt.termguicolors = true
-opt.background = "dark" -- colorschemes that can be light or dark will be made dark
-opt.signcolumn = "yes" -- show sign column so that text doesn't shift
+-- Turn on termguicolors
+vim.opt.termguicolors = true
+-- If colorschemes can be light or dark, make them
+vim.opt.background = "dark"
+vim.opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
 -- backspace
-opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
+vim.opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
 -- clipboard
-opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+vim.opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
 -- split windows
-opt.splitright = true -- split vertical window to the right
-opt.splitbelow = true -- split horizontal window to the bottom
+vim.opt.splitright = true -- split vertical window to the right
+vim.opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
-opt.swapfile = false
+vim.opt.swapfile = false
 
 -- tabs & indentation
 vim.opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
@@ -42,9 +43,11 @@ vim.opt.autoindent = true -- copy indent from current line when starting new one
 vim.opt.expandtab = true
 vim.opt.number = true
 
-vim.g.mapleader = " "
+-- Highlight column 80
+vim.opt.colorcolumn = '80'
 
-local opts = {}
+-- Make the leader a space
+vim.g.mapleader = " "
 
 -- Remember last cursor position
 local lastplace = vim.api.nvim_create_augroup("LastPlace", {})
@@ -62,5 +65,5 @@ vim.api.nvim_create_autocmd("BufReadPost", {
     end,
 })
 
--- Set the colorscheme (font)
--- vim.opt.guifont='JetBrainsMono Nerd Font'
+-- Set the colorscheme (font) [this may not be necessary]
+vim.opt.guifont='JetBrainsMono Nerd Font'
