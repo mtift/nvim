@@ -49,6 +49,9 @@ vim.opt.colorcolumn = '80'
 -- Make the leader a space
 vim.g.mapleader = " "
 
+-- This doesn't play well in the neo-tree.lua file
+vim.keymap.set('n', '<leader>e', ':Neotree filesystem reveal left<CR>', {})
+
 -- Remember last cursor position
 local lastplace = vim.api.nvim_create_augroup("LastPlace", {})
 vim.api.nvim_clear_autocmds({ group = lastplace })

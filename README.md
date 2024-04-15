@@ -25,6 +25,7 @@
 - [`none-ls`](https://github.com/nvimtools/none-ls.nvim) - Wraps CLI tools in LSPs
 - [`nvim-cmp`](https://github.com/hrsh7th/nvim-cmp) - Completion engine for Neovim
 - [`nvim-dap`](https://github.com/mfussenegger/nvim-dap) - Debug Adapter Protocol (DAP) client for Neovim
+- [`nvim-dap-ui`](https://github.com/rcarriga/nvim-dap-ui) - Debugging UI for nvim-dap
 - [`telescope`](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy finder
 - [`treesitter`](https://github.com/nvim-treesitter/nvim-treesitter) - Parser generator tool and an incremental parsing library
 
