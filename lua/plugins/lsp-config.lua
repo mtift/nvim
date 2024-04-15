@@ -2,6 +2,14 @@ return {
   {
     -- mason installs and manages language servers
     "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "php-debug-adapter",
+        "intelephense",
+        "phpcs",
+        "phpstan",
+      },
+    },
     config = function()
       require("mason").setup()
     end
