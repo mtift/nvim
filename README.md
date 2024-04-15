@@ -16,10 +16,15 @@
 
 ## Plugins
 - [`alpha-nvim`](https://github.com/goolord/alpha-nvim) - Splash screen
+- [`cmp-nvim-lsp`](https://github.com/hrsh7th/cmp-nvim-lsp) - nvim-cmp source for neovim builtin LSP client
+- [`cmp_luasnip`](https://github.com/saadparwaiz1/cmp_luasnip) - Luasnip completion source for nvim-cmp 
+- [`friendly-snippets`](https://github.com/rafamadriz/friendly-snippets) - Preconfigured snippets, mostly from VSCode
 - [`lualine`](https://github.com/nvim-lualine/lualine.nvim) - Statusline
+- [`luasnip`](https://github.com/L3MON4D3/LuaSnip) - Snippet engine for Neovim
 - [`neo-tree`](https://github.com/nvim-neo-tree/neo-tree.nvim) - Filesystem as sidebar
 - [`none-ls`](https://github.com/nvimtools/none-ls.nvim) - Wraps CLI tools in LSPs
 - [`nvim-cmp`](https://github.com/hrsh7th/nvim-cmp) - Completion engine for Neovim
+- [`nvim-dap`](https://github.com/mfussenegger/nvim-dap) - Debug Adapter Protocol (DAP) client for Neovim
 - [`telescope`](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy finder
 - [`treesitter`](https://github.com/nvim-treesitter/nvim-treesitter) - Parser generator tool and an incremental parsing library
 
