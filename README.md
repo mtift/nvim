@@ -3,8 +3,16 @@
 [Drupal](https://www.drupal.org) development with [Nvim](https://neovim.io)
 
 ## Requirements
-- PHP
-- [DDEV](https://ddev.com)
+- [Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md) >= 0.9.0
+- Git >= 2.19.0
+- A Nerd Font
+- A C compiler for nvim-treesitter
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+    - `sudo apt install ripgrep`
+    - `brew install ripgrep`
+- [fd](https://github.com/sharkdp/fd)
+    - `sudo apt install fd-find`
+    - `brew install fd`
 
 ## Plugin manager
 - [`lazy`](https://github.com/folke/lazy.nvim)
