@@ -41,8 +41,11 @@
 - [`treesitter`](https://github.com/nvim-treesitter/nvim-treesitter) - Parser generator tool and an incremental parsing library
 
 ## Keyboard shortcuts
-- `<leader>e` - open Neotree
-- `<Leader>dt` - toggle breakpoint
 - `<Leader>dc` - start/continue debugging
-- `<Leader>do` - step over
 - `<Leader>di` - step into
+- `<Leader>do` - step over
+- `<Leader>dt` - toggle breakpoint
+- `<leader>e` - open neo-tree
+- `<leader>ff` - find files
+- `<leader>lg` - live grep
+- `<leader>sk` - searh keymaps
