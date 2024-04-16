@@ -28,6 +28,7 @@
 ## Plugins
 - [`alpha-nvim`](https://github.com/goolord/alpha-nvim) - Splash screen
 - [`cmp-nvim-lsp`](https://github.com/hrsh7th/cmp-nvim-lsp) - nvim-cmp source for neovim builtin LSP client
+- [`cmp-path`](https://github.com/hrsh7th/cmp-path) - File completion
 - [`cmp_luasnip`](https://github.com/saadparwaiz1/cmp_luasnip) - Luasnip completion source for nvim-cmp 
 - [`friendly-snippets`](https://github.com/rafamadriz/friendly-snippets) - Preconfigured snippets, mostly from VSCode
 - [`lualine`](https://github.com/nvim-lualine/lualine.nvim) - Statusline
