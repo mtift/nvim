@@ -14,6 +14,9 @@
     - `sudo apt install fd-find`
     - `brew install fd`
 
+## Debugging requirements
+- [xdebug](https://xdebug.org) (for PHP debugging)
+
 ## Plugin manager
 - [`lazy`](https://github.com/folke/lazy.nvim)
 
@@ -37,10 +40,9 @@
 - [`telescope`](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy finder
 - [`treesitter`](https://github.com/nvim-treesitter/nvim-treesitter) - Parser generator tool and an incremental parsing library
 
-## Debugging with [xdebug](https://xdebug.org (sames shortcuts as [vdebug](https://github.com/vim-vdebug/vdebug))
-- `<Space>db`: toggle breakpoint
-- `<F5>`: start/continue (to next breakpoint/end of script)
-- `<F2>`: step over
-- `<F3>`: step into
-- `<F4>`: step out
-- `<F6>`: stop debugging
+## Keyboard shortcuts
+- `<leader>e` - open Neotree
+- `<Leader>dt` - toggle breakpoint
+- `<Leader>dc` - start/continue debugging
+- `<Leader>do` - step over
+- `<Leader>di` - step into
