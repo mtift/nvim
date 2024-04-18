@@ -50,3 +50,4 @@
 - `<leader>ff` - find files
 - `<leader>lg` - live grep
 - `<leader>sk` - searh keymaps
+- gc - toggle comments for selected lines
