@@ -4,8 +4,8 @@ return {
   config = function ()
     require('bufferline').setup({
       options = {
-        vim.keymap.set('n', '<leader>bn', ':BufferLineMoveNext<CR>', {}),
-        vim.keymap.set('n', '<leader>bp', ':BufferLineMovePrevious<CR>', {})
+        vim.keymap.set('n', 'gt', ':BufferLineMoveNext<CR>', {}),
+        vim.keymap.set('n', 'gT', ':BufferLineMovePrev<CR>', {})
       }
     })
   end

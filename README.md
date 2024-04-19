@@ -44,8 +44,6 @@
 - [`treesitter`](https://github.com/nvim-treesitter/nvim-treesitter) - Parser generator tool and an incremental parsing library
 
 ## Keyboard shortcuts
-- `<Leader>bn` - next buffer
-- `<Leader>bp` - previous buffer
 - `<Leader>dc` - start/continue debugging
 - `<Leader>di` - step into
 - `<Leader>do` - step over
@@ -55,3 +53,5 @@
 - `<leader>lg` - live grep
 - `<leader>sk` - searh keymaps
 - `gc` - toggle comments for selected lines
+- `gt` - next buffer
+- `gT` - previous buffer
