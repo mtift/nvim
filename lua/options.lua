@@ -49,6 +49,10 @@ vim.opt.colorcolumn = '80'
 -- Make the leader a space
 vim.g.mapleader = " "
 
+-- Check spelling
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
+
 -- This doesn't play well in the neo-tree.lua file
 vim.keymap.set('n', '<leader>e', ':Neotree filesystem reveal left<CR>', {})
 

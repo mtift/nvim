@@ -29,6 +29,7 @@
 - [`alpha-nvim`](https://github.com/goolord/alpha-nvim) - Splash screen
 - [`bufferline`](https://github.com/akinsho/bufferline.nvim) - Buffer tabs
 - [`cmp-nvim-lsp`](https://github.com/hrsh7th/cmp-nvim-lsp) - nvim-cmp source for neovim builtin LSP client
+- [`cmp-buffer`](https://github.com/hrsh7th/cmp-buffer) - Buffer completion (other words in the file)
 - [`cmp-path`](https://github.com/hrsh7th/cmp-path) - File completion
 - [`cmp_luasnip`](https://github.com/saadparwaiz1/cmp_luasnip) - Luasnip completion source for nvim-cmp 
 - [`comments`](https://github.com/numToStr/Comment.nvim) - Commenting
