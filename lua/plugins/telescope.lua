@@ -1,7 +1,9 @@
 return {
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.6',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+    },
     config = function ()
       local builtin = require("telescope.builtin")
       vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
@@ -22,4 +24,13 @@ return {
       require("telescope").load_extension("ui-select")
     end
   },
-  }
+  {
+    'rafi/telescope-thesaurus.nvim',
+    extensions = {
+      thesaurus = {
+        provider = 'freedictionaryapi',
+      },
+    },
+    vim.keymap.set('n', '<leader>tt', '<cmd>Telescope thesaurus lookup<CR>')
+  },
+}
