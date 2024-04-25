@@ -52,7 +52,7 @@
 - `<leader>e` - open neo-tree
 - `<leader>ff` - find files
 - `<leader>lg` - live grep
-- `<leader>sk` - searh keymaps
+- `<leader>sk` - search keymaps
 - `gc` - toggle comments for selected lines
 - `gt` - next buffer
 - `gT` - previous buffer
