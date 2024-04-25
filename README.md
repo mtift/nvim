@@ -42,15 +42,17 @@
 - [`nvim-dap`](https://github.com/mfussenegger/nvim-dap) - Debug Adapter Protocol (DAP) client for Neovim
 - [`nvim-dap-ui`](https://github.com/rcarriga/nvim-dap-ui) - Debugging UI for nvim-dap
 - [`telescope`](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy finder
+- [`toggleterm`](https://github.com/akinsho/toggleterm.nvim) - Floating terminal
 - [`treesitter`](https://github.com/nvim-treesitter/nvim-treesitter) - Parser generator tool and an incremental parsing library
 
 ## Keyboard shortcuts
-- `<Leader>dc` - start/continue debugging
-- `<Leader>di` - step into
-- `<Leader>do` - step over
-- `<Leader>dt` - toggle breakpoint
+- `<Leader>dc` - debug continue/start debugging
+- `<Leader>di` - debug step into
+- `<Leader>do` - debug step over
+- `<Leader>dt` - debug toggle breakpoint
 - `<leader>e` - open neo-tree
 - `<leader>ff` - find files
+- `<leader>ft` - floating terminal
 - `<leader>lg` - live grep
 - `<leader>sk` - search keymaps
 - `gc` - toggle comments for selected lines
