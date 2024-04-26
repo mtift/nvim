@@ -18,7 +18,7 @@
 - [xdebug](https://xdebug.org) (for PHP debugging)
 
 ## Plugin manager
-- [`lazy`](https://github.com/folke/lazy.nvim)
+- [`lazy`](https://github.com/folke/lazy.nvim) (open with :Lazy)
 
 ## LSP (Language Server Protocol)
 - [`mason`](https://github.com/williamboman/mason.nvim) - Package manager for LSP servers, DAP servers, linters, and formatters
