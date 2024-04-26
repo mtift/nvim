@@ -6,9 +6,8 @@ return {
     config = function()
       require('toggleterm').setup({
         open_mapping = '<leader>ft',
-        direction = 'horizontal',
+        direction = 'float',
         shade_terminals = true,
-        size = 3,
       })
     end
   }

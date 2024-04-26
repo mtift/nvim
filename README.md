@@ -52,7 +52,7 @@
 - `<Leader>dt` - debug toggle breakpoint
 - `<leader>e` - open neo-tree
 - `<leader>ff` - find files
-- `<leader>ft` - floating terminal
+- `<leader>ft` - floating terminal show/hide
 - `<leader>lg` - live grep
 - `<leader>sk` - search keymaps
 - `gc` - toggle comments for selected lines
