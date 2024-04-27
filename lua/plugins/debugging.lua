@@ -9,7 +9,7 @@ return {
     local dap = require("dap")
     local dapui = require("dapui")
 
-    -- The following assumes you've installed the vscode-debug-php adapter using mason.nvim
+    -- The following assumes you've installed the php-debug-adapter using mason.nvim
     dap.adapters.php = {
       type = "executable",
       command = "node",

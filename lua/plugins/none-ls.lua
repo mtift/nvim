@@ -8,11 +8,15 @@ return {
       diagnostics_format = "#{m} (#{c}) [#{s}]",
       sources = {
         null_ls.builtins.formatting.stylua,
-        null_ls.builtins.diagnostics.phpstan.with({
-          prefer_local = "vendor/bin",
-        }),
+        -- null_ls.builtins.diagnostics.phpstan.with({
+        --   prefer_local = "vendor/bin",
+        -- }),
         null_ls.builtins.diagnostics.phpcs.with({
           prefer_local = "vendor/bin",
+          extra_args = { "--standard=Drupal" }
+        }),
+        null_ls.builtins.formatting.phpcbf.with({
+          extra_args = { "--standard=Drupal" }
         }),
         null_ls.builtins.formatting.phpcbf.with({
           prefer_local = "vendor/bin",
