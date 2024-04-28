@@ -11,6 +11,14 @@ return {
         -- null_ls.builtins.diagnostics.phpstan.with({
         --   prefer_local = "vendor/bin",
         -- }),
+        --
+        -- In .zshrc/.bashrc:
+        --   export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+        -- Install Drupal Coder:
+        --   composer global require drupal/coder:8.3.13
+        -- Configure the Mason phpcs to use Coder:
+        --   phpcs --config-set installed_paths ~/.config/composer/vendor/drupal/coder/coder_sniffer
+        -- TODO: Configure phpcs to find phpcs.xml
         null_ls.builtins.diagnostics.phpcs.with({
           prefer_local = "vendor/bin",
           extra_args = { "--standard=Drupal" }
