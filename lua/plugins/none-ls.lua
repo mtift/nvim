@@ -4,14 +4,14 @@ return {
 		local null_ls = require("null-ls")
     local utils = require("null-ls.utils")
 		null_ls.setup({
-      root_dir = utils.root_pattern("composer.json", "package.json", "Makefile", ".git"),
+      -- Find the root directory by looking for a phpcs.xml file. This could
+      -- also include composer.json, .git, etc.
+      root_dir = utils.root_pattern("phpcs.xml"),
+      -- `#{m}`: message
+      -- `#{s}`: source name (defaults to `null-ls` if not specified)
+      -- `#{c}`: code (if available)
       diagnostics_format = "#{m} (#{c}) [#{s}]",
       sources = {
-        null_ls.builtins.formatting.stylua,
-        -- null_ls.builtins.diagnostics.phpstan.with({
-        --   prefer_local = "vendor/bin",
-        -- }),
-
         -- A manual (NOT recommended) way to enforce Drupal coding standards:
         -- In .zshrc/.bashrc:
         --   export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
@@ -31,12 +31,22 @@ return {
         null_ls.builtins.diagnostics.phpcs.with({
           prefer_local = "vendor/bin",
         }),
+        -- Similarly, configure with a phpstan.neon file.
+        null_ls.builtins.diagnostics.phpstan.with({
+          prefer_local = "vendor/bin",
+        }),
         null_ls.builtins.formatting.phpcbf.with({
           prefer_local = "vendor/bin",
         }),
+        null_ls.builtins.formatting.stylua,
       },
     })
 
     vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+    -- Show errors
+    vim.keymap.set('n', '<space>er', '<cmd>lua vim.diagnostic.open_float()<CR>')
+    -- Show current root
+    vim.keymap.set('n', '<leader>cr', '<cmd>lua print(require("null-ls.client").get_client().config.root_dir)<CR>', {})
+
   end,
 }
