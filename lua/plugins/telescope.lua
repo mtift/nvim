@@ -26,11 +26,15 @@ return {
   },
   {
     'rafi/telescope-thesaurus.nvim',
-    extensions = {
-      thesaurus = {
-        provider = 'freedictionaryapi',
-      },
-    },
-    vim.keymap.set('n', '<leader>tt', '<cmd>Telescope thesaurus lookup<CR>')
+    config = function()
+      require("telescope").setup {
+        extensions = {
+          thesaurus = {
+            provider = 'datamuse',
+          },
+        }
+      }
+      vim.keymap.set('n', '<leader>tt', '<cmd>Telescope thesaurus lookup<CR>')
+    end
   },
 }
