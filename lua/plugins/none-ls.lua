@@ -4,6 +4,8 @@ return {
 		local null_ls = require("null-ls")
     local utils = require("null-ls.utils")
 		null_ls.setup({
+      -- Change this to debug with `:NullLsLog`. Double check PHP version.
+      debug = false,
       -- Find the root directory by looking for a phpcs.xml file. This could
       -- also include composer.json, .git, etc.
       root_dir = utils.root_pattern("phpcs.xml"),
