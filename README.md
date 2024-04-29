@@ -14,6 +14,10 @@
     - `sudo apt install fd-find`
     - `brew install fd`
 
+## Installation
+- [Install on Debian/Ubuntu](./docs/debian-install.md)
+- [Install on a Mac](./docs/mac-install.md)
+
 ## Debugging requirements
 - [xdebug](https://xdebug.org) (for PHP debugging)
 
