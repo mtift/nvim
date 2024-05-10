@@ -55,6 +55,7 @@
 - `<Leader>do` - debug step over
 - `<Leader>dt` - debug toggle breakpoint
 - `<leader>e` - open neo-tree
+- `<leader>er` - float linting messages that don't wrap
 - `<leader>ff` - find files
 - `<leader>ft` - floating terminal show/hide
 - `<leader>lg` - live grep
