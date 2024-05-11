@@ -68,6 +68,8 @@ xdebug.max_nesting_level=1000
 - `<leader>er` - float linting messages that don't wrap
 - `<leader>ff` - find files
 - `<leader>ft` - floating terminal show/hide
+- `<leader>gh` - show git history for the current file
+- `<leader>ghc` - close the git history window
 - `<leader>lg` - live grep
 - `<leader>sk` - search keymaps
 - `<leader>t` - open alpha splash screen in a new tab
