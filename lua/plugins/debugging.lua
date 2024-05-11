@@ -20,6 +20,16 @@ return {
     }
 
     dap.configurations.php = {
+      -- For DDEV place your luanch.json script in the root of your project:
+      --     .vscode/launch.json file.
+      -- Follow the DDEV instructions for VSCode:
+      --     https://ddev.readthedocs.io/en/stable/users/debugging-profiling/step-debugging/#ide-setup
+      -- If you encounter problems, see the DDEV troubleshooting guide:
+      --     https://ddev.readthedocs.io/en/stable/users/debugging-profiling/step-debugging/#troubleshooting-xdebug
+      -- Here are more related discussions that helped me get up an running:
+      --     https://github.com/ddev/ddev/issues/5099
+      --     https://github.com/LazyVim/LazyVim/discussions/645
+      -- You might need to run `sudo ufw allow 9003` and then restart
       {
         type = "php",
         request = "launch",

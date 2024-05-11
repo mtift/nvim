@@ -35,6 +35,7 @@
 - [`cmp_luasnip`](https://github.com/saadparwaiz1/cmp_luasnip) - Luasnip completion source for nvim-cmp 
 - [`comments`](https://github.com/numToStr/Comment.nvim) - Commenting
 - [`friendly-snippets`](https://github.com/rafamadriz/friendly-snippets) - Preconfigured snippets, mostly from VSCode
+- [`diffview`](https://github.com/sindrets/diffview.nvim) - Show Git history and diffs
 - [`lualine`](https://github.com/nvim-lualine/lualine.nvim) - Statusline
 - [`luasnip`](https://github.com/L3MON4D3/LuaSnip) - Snippet engine for Neovim
 - [`neo-tree`](https://github.com/nvim-neo-tree/neo-tree.nvim) - Filesystem as sidebar
