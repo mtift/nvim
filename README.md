@@ -18,9 +18,6 @@
 - [Install on Debian/Ubuntu](./docs/debian-install.md)
 - [Install on a Mac](./docs/mac-install.md)
 
-## Debugging requirements
-- [xdebug](https://xdebug.org) (for PHP debugging)
-
 ## Plugin manager
 - [`lazy`](https://github.com/folke/lazy.nvim) (open with :Lazy)
 
@@ -48,6 +45,19 @@
 - [`telescope`](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy finder
 - [`toggleterm`](https://github.com/akinsho/toggleterm.nvim) - Floating terminal
 - [`treesitter`](https://github.com/nvim-treesitter/nvim-treesitter) - Parser generator tool and an incremental parsing library
+
+## Debugging requirements
+- [xdebug](https://xdebug.org) (for PHP debugging)
+- To debug locally, add the following to `/etc/php/8.3/fpm/php.ini`:
+```
+xdebug.client_port=9003
+xdebug.mode=debug,develop
+xdebug.start_with_request=yes
+xdebug.max_nesting_level=1000
+```
+- To debug with ddev:
+    - `wget https://ddev.readthedocs.io/en/stable/users/snippets/launch.json`
+    - `ddev xdebug`
 
 ## Keyboard shortcuts
 - `<Leader>dc` - debug continue/start debugging
