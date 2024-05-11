@@ -19,5 +19,6 @@ return {
       "                                                     ",
     }
     alpha.setup(dashboard.opts)
+    vim.keymap.set('n', '<leader>t', ':Alpha<CR>', {})
   end,
 }
