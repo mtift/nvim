@@ -56,6 +56,10 @@ vim.opt.spell = true
 -- This doesn't play well in the neo-tree.lua file
 vim.keymap.set('n', '<leader>e', ':Neotree filesystem reveal left<CR>', {})
 
+-- Setup vim-like key bindings for navigating tabs
+vim.keymap.set('n', 'gt', ':bNext<CR>', {})
+vim.keymap.set('n', 'gT', ':bprevious<CR>', {})
+
 -- Remember last cursor position
 local lastplace = vim.api.nvim_create_augroup("LastPlace", {})
 vim.api.nvim_clear_autocmds({ group = lastplace })

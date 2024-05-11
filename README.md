@@ -70,6 +70,7 @@ xdebug.max_nesting_level=1000
 - `<leader>ft` - floating terminal show/hide
 - `<leader>lg` - live grep
 - `<leader>sk` - search keymaps
+- `<leader>t` - open alpha splash screen in a new tab
 - `gc` - toggle comments for selected lines
 - `gt` - next buffer
 - `gT` - previous buffer
