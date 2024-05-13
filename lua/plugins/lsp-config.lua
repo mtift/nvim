@@ -1,57 +1,80 @@
 return {
   {
-    -- mason installs and manages language servers
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "php-debug-adapter",
-        "intelephense",
-        "phpcs",
-        "phpstan",
-      },
+    "VonHeikemen/lsp-zero.nvim",
+    dependencies = {
+      -- LSP Support
+      {"neovim/nvim-lspconfig"},
+      {"williamboman/mason.nvim"},
+      {"williamboman/mason-lspconfig.nvim"},
+
+      -- Autocompletion
+      {"hrsh7th/nvim-cmp"},
+      {"hrsh7th/cmp-buffer"},
+      {"hrsh7th/cmp-path"},
+      {"saadparwaiz1/cmp_luasnip"},
+      {"hrsh7th/cmp-nvim-lsp"},
+      {"hrsh7th/cmp-nvim-lua"},
+
+      -- Snippets
+      {"L3MON4D3/LuaSnip"},
+      {"rafamadriz/friendly-snippets"},
     },
     config = function()
-      require("mason").setup()
-    end
-  },
-  {
-    -- mason-lspconfig provides ensure_installed property
-    "williamboman/mason-lspconfig.nvim",
-    config = function()
-      require("mason-lspconfig").setup({
+      require("mason").setup({
         ensure_installed = {
-          "lua_ls",
-          -- "intelephense",
-          -- "phpactor",
+          "php-debug-adapter",
+          "intelephense",
+          "phpcs",
+          "phpstan",
         }
       })
-    end
-  },
-  {
-    -- Connects Neovim to the language server and
-    -- provides communication back & forth
-    "neovim/nvim-lspconfig",
-    lazy = false,
-    config = function()
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-      -- Setup the connections
-      local lspconfig = require("lspconfig")
-      lspconfig.tsserver.setup({
-        capabilities = capabilities
+      require("mason-lspconfig").setup({
+        ensure_installed = {
+          "html",
+          "lua_ls",
+          "phpactor",
+          "tsserver",
+        }
       })
+
+      -- Setup intelephense as a LSP using lsp-zero 
+      -- See: https://alextheobold.com/posts/intelephense_in_neovim/ 
+      -- TODO: consider removing this "fremium" software
+      local lsp = require("lsp-zero")
+      lsp.preset("recommended")
+
+      local on_attach = function ()
+        local opts = {buffer = 0}
+        vim.diagnostic.config({
+          virtual_text = true,
+        })
+
+        vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+        vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+        vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+      end
+
+      lsp.configure("intelephense", {
+        on_attach = on_attach,
+      })
+
+      lsp.setup()
+
+      -- Setup lua, HTML, typescript, etc.
+      local lspconfig = require("lspconfig")
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
       lspconfig.html.setup({
         capabilities = capabilities
       })
       lspconfig.lua_ls.setup({
         capabilities = capabilities
       })
-
-      -- Create shortcut keys
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-      vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
-      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
-    end,
-  },
+      lspconfig.phpactor.setup({
+        capabilities = capabilities
+      })
+      lspconfig.tsserver.setup({
+        capabilities = capabilities
+      })
+    end
+  }
 }

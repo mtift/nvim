@@ -22,6 +22,7 @@
 - [`lazy`](https://github.com/folke/lazy.nvim) (open with :Lazy)
 
 ## LSP (Language Server Protocol)
+- [`lsp-zero`](https://github.com/VonHeikemen/lsp-zero.nvim) - Helps setup intelephense LSP
 - [`mason`](https://github.com/williamboman/mason.nvim) - Package manager for LSP servers, DAP servers, linters, and formatters
 - [`mason-lspconfig`](https://github.com/williamboman/mason-lspconfig.nvim) - Bridges mason.nvim with the lspconfig plugin
 - [`nvim-lspconfig`](https://github.com/neovim/nvim-lspconfig) - Connects Neovim to the language server
