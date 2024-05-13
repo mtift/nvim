@@ -75,6 +75,9 @@ xdebug.max_nesting_level=1000
 - `<leader>lg` - live grep
 - `<leader>sk` - search keymaps
 - `<leader>t` - open alpha splash screen in a new tab
-- `gc` - toggle comments for selected lines
-- `gt` - next buffer
+- `K` - hover definition
 - `gT` - previous buffer
+- `gc` - toggle comments for selected lines
+- `gd` - go to definition
+- `gr` - show references in horizontal split
+- `gt` - next buffer
