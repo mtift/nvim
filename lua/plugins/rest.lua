@@ -12,15 +12,44 @@ return {
     ft = "http",
     dependencies = { "luarocks.nvim" },
     config = function()
-      require("rest-nvim").setup()
-      -- first load extension
-      require("telescope").load_extension("rest")
-      -- then use it, you can also use the `:Telescope rest select_env` command
-      require("telescope").extensions.rest.select_env()
+
+      local ok, rest = pcall(require, "rest-nvim")
+      if not ok then
+        return
+      end
+
+      rest.setup {
+        result = {
+          behavior = {
+            formatters = {
+              json = "jq",
+              vnd = "jq",
+              html = function(body)
+                if vim.fn.executable("tidy") == 0 then
+                  return body, { found = false, name = "tidy" }
+                end
+                local fmt_body = vim.fn.system({
+                  "tidy",
+                  "-i",
+                  "-q",
+                  "--tidy-mark",      "no",
+                  "--show-body-only", "auto",
+                  "--show-errors",    "0",
+                  "--show-warnings",  "0",
+                  "-",
+                }, body):gsub("\n$", "")
+
+                return fmt_body, { found = true, name = "tidy" }
+              end,
+            },
+          },
+        },
+      }
 
       -- Add some keybindings
       vim.keymap.set('n', '<leader>rr', '<cmd>Rest run<cr>')
-      vim.keymap.set('n', '<leader>rl', '<cmd>Rest run last<cr>', 'Re-run latest request')
+      vim.keymap.set('n', '<leader>rl', '<cmd>Rest run last<cr>')
     end,
   },
+
 }
