@@ -57,7 +57,7 @@ vim.opt.spell = true
 vim.keymap.set('n', '<leader>e', ':Neotree filesystem reveal left<CR>', {})
 
 -- Setup vim-like key bindings for navigating tabs
-vim.keymap.set('n', 'gt', ':bNext<CR>', {})
+vim.keymap.set('n', 'gt', ':bnext<CR>', {})
 vim.keymap.set('n', 'gT', ':bprevious<CR>', {})
 
 -- Remember last cursor position
