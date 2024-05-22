@@ -41,6 +41,15 @@ return {
       },
       {
         type = "php",
+        name = "Listen for XDebug in Docksal" ,
+        request = "launch",
+        port = 9000,
+        pathMappings = {
+          ["/var/www/"] = "${workspaceFolder}"
+        },
+      },
+      {
+        type = "php",
         request = "launch",
         name = "Listen for Xdebug",
         port = 9003,
