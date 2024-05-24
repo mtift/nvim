@@ -63,10 +63,11 @@ xdebug.max_nesting_level=1000
     - `ddev xdebug`
 
 ## Keyboard shortcuts
-- `<Leader>dc` - debug continue/start debugging
-- `<Leader>di` - debug step into
-- `<Leader>do` - debug step over
-- `<Leader>dt` - debug toggle breakpoint
+- `<F5>` - debug continue/start debugging
+- `<F10>` - debug step into
+- `<F11>` - debug step over
+- `<F12>` - debug step oout
+- `<Leader>b` - debug toggle breakpoint
 - `<leader>e` - open neo-tree
 - `<leader>er` - float linting messages that don't wrap
 - `<leader>ff` - find files
@@ -74,6 +75,7 @@ xdebug.max_nesting_level=1000
 - `<leader>gh` - show git history for the current file
 - `<leader>ghc` - close the git history window
 - `<leader>lg` - live grep
+- `<leader>rr` - make HTTP request
 - `<leader>sk` - search keymaps
 - `<leader>t` - open alpha splash screen in a new tab
 - `K` - hover definition
