@@ -76,9 +76,18 @@ vim.api.nvim_create_autocmd("BufReadPost", {
     end,
 })
 
+local handle = io.popen("uname")
+local result = handle:read("*a")
+OS = result:gsub("%s+", "")
+
+if OS == "Linux" then
+  vim.opt.guifont='JetBrainsMono Nerd Font:h14'
+elseif OS == "Darwin" then
+  vim.opt.guifont='JetBrainsMono Nerd Font:h18'
+end
+
 -- Neovide config
 if vim.g.neovide then
-  vim.opt.guifont='JetBrainsMono Nerd Font:h18'
   vim.opt.linespace = 1
   vim.g.neovide_cursor_trail_size = 0.8 -- default is 0.8
   vim.g.neovide_cursor_animation_length = 0 -- default is 0.13
