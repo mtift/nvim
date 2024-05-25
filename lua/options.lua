@@ -76,5 +76,10 @@ vim.api.nvim_create_autocmd("BufReadPost", {
     end,
 })
 
--- Set the colorscheme (font) [this may not be necessary]
-vim.opt.guifont='JetBrainsMono Nerd Font'
+-- Neovide config
+if vim.g.neovide then
+  vim.opt.guifont='JetBrainsMono Nerd Font:h18'
+  vim.opt.linespace = 1
+  vim.g.neovide_cursor_trail_size = 0.8 -- default is 0.8
+  vim.g.neovide_cursor_animation_length = 0 -- default is 0.13
+end
