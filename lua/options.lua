@@ -76,13 +76,11 @@ vim.api.nvim_create_autocmd("BufReadPost", {
     end,
 })
 
-local handle = io.popen("uname")
-local result = handle:read("*a")
-OS = result:gsub("%s+", "")
-
-if OS == "Linux" then
+-- Make OS-specific settings
+local sysname = vim.loop.os_uname().sysname
+if sysname == "Linux" then
   vim.opt.guifont='JetBrainsMono Nerd Font:h14'
-elseif OS == "Darwin" then
+elseif sysname == "Darwin" then
   vim.opt.guifont='JetBrainsMono Nerd Font:h18'
 end
 
