@@ -64,9 +64,10 @@ xdebug.max_nesting_level=1000
 
 ## Keyboard shortcuts
 - `<F5>` - debug continue/start debugging
+- `<F6>` - close debugger
 - `<F10>` - debug step into
 - `<F11>` - debug step over
-- `<F12>` - debug step oout
+- `<F12>` - debug step out
 - `<Leader>b` - debug toggle breakpoint
 - `<leader>e` - open neo-tree
 - `<leader>er` - float linting messages that don't wrap

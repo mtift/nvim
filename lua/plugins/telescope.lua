@@ -8,7 +8,6 @@ return {
       local ignore_patterns = {
         "yarn%.lock",
         "node_modules/",
-        "raycast/",
         "dist/",
         "%.next",
         "%.git/",
@@ -17,7 +16,6 @@ return {
         "target/",
         "package%-lock%.json",
       }
-
       local builtin = require("telescope.builtin")
       vim.keymap.set("n", "<leader>lg", function()
         builtin.live_grep({
