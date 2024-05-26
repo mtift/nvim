@@ -5,9 +5,32 @@ return {
       'nvim-lua/plenary.nvim',
     },
     config = function ()
+      local ignore_patterns = {
+        "yarn%.lock",
+        "node_modules/",
+        "raycast/",
+        "dist/",
+        "%.next",
+        "%.git/",
+        "%.gitlab/",
+        "build/",
+        "target/",
+        "package%-lock%.json",
+      }
+
       local builtin = require("telescope.builtin")
-      vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-      vim.keymap.set('n', '<leader>lg', builtin.live_grep, {})
+      vim.keymap.set("n", "<leader>lg", function()
+        builtin.live_grep({
+          no_ignore = true,
+          file_ignore_patterns = ignore_patterns,
+        })
+      end, { desc = "[L]ive [G]rep" })
+      vim.keymap.set("n", "<leader>ff", function()
+        builtin.find_files({
+          no_ignore = true,
+          file_ignore_patterns = ignore_patterns,
+        })
+      end, { desc = "[F]ind [F]iles" })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, {})
     end
   },
