@@ -46,6 +46,7 @@
 - [`nvim-dap`](https://github.com/mfussenegger/nvim-dap) - Debug Adapter Protocol (DAP) client for Neovim
 - [`nvim-dap-ui`](https://github.com/rcarriga/nvim-dap-ui) - Debugging UI for nvim-dap
 - [`telescope`](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy finder
+- [`telescope-live-grep-args`](https://github.com/nvim-telescope/telescope-live-grep-args.nvim) - Find text with arguments
 - [`toggleterm`](https://github.com/akinsho/toggleterm.nvim) - Floating terminal
 - [`treesitter`](https://github.com/nvim-treesitter/nvim-treesitter) - Parser generator tool and an incremental parsing library
 
@@ -76,6 +77,7 @@ xdebug.max_nesting_level=1000
 - `<leader>gh` - show git history for the current file
 - `<leader>ghc` - close the git history window
 - `<leader>lg` - live grep
+- `<leader>lga` - live grep with args (`"Choice" -g "*.schema.yml"`)
 - `<leader>rr` - make HTTP request
 - `<leader>sk` - search keymaps
 - `<leader>t` - open alpha splash screen in a new tab
