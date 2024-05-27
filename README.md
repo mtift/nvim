@@ -69,7 +69,9 @@ xdebug.max_nesting_level=1000
 - `<F10>` - debug step into
 - `<F11>` - debug step over
 - `<F12>` - debug step out
-- `<Leader>b` - debug toggle breakpoint
+- `<leader>b` - debug toggle breakpoint
+- `<leader>c` - toggle comments for selected lines in normal and visual mode
+- `<leader>cc` - toggle comments for selected lines in normal mode
 - `<leader>e` - open neo-tree
 - `<leader>er` - float linting messages that don't wrap
 - `<leader>ff` - find files
@@ -83,7 +85,6 @@ xdebug.max_nesting_level=1000
 - `<leader>t` - open alpha splash screen in a new tab
 - `K` - hover definition
 - `gT` - previous buffer
-- `gc` - toggle comments for selected lines
 - `gd` - go to definition
 - `gr` - show references in horizontal split
 - `gt` - next buffer
