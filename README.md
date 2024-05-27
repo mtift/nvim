@@ -35,6 +35,7 @@
 - [`cmp-path`](https://github.com/hrsh7th/cmp-path) - File completion
 - [`cmp_luasnip`](https://github.com/saadparwaiz1/cmp_luasnip) - Luasnip completion source for nvim-cmp 
 - [`comments`](https://github.com/numToStr/Comment.nvim) - Commenting
+- [`coq_nvim`](https://github.com/ms-jpq/coq_nvim/) - LSP completion
 - [`diffview`](https://github.com/sindrets/diffview.nvim) - Show Git history and diffs
 - [`friendly-snippets`](https://github.com/rafamadriz/friendly-snippets) - Preconfigured snippets, mostly from VSCode
 - [`gitsigns`](https://github.com/lewis6991/gitsigns.nvim) - Show current line blame

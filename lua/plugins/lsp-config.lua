@@ -14,6 +14,7 @@ return {
       {"saadparwaiz1/cmp_luasnip"},
       {"hrsh7th/cmp-nvim-lsp"},
       {"hrsh7th/cmp-nvim-lua"},
+      {"ms-jpq/coq_nvim"},
 
       -- Snippets
       {"L3MON4D3/LuaSnip"},
@@ -62,6 +63,7 @@ return {
 
       -- Setup lua, HTML, typescript, etc.
       local lspconfig = require("lspconfig")
+      local coq = require "coq"
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
       lspconfig.html.setup({
         capabilities = capabilities
@@ -70,7 +72,8 @@ return {
         capabilities = capabilities
       })
       lspconfig.phpactor.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
+        coq.lsp_ensure_capabilities()
       })
       lspconfig.tsserver.setup({
         capabilities = capabilities
