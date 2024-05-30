@@ -29,6 +29,7 @@
 
 ## Plugins
 - [`alpha-nvim`](https://github.com/goolord/alpha-nvim) - Splash screen
+- [`autopairs`](https://github.com/windwp/nvim-autopairs) - Add matching quotes, parentheses, etc.
 - [`bufferline`](https://github.com/akinsho/bufferline.nvim) - Buffer tabs
 - [`cmp-nvim-lsp`](https://github.com/hrsh7th/cmp-nvim-lsp) - nvim-cmp source for neovim builtin LSP client
 - [`cmp-buffer`](https://github.com/hrsh7th/cmp-buffer) - Buffer completion (other words in the file)
