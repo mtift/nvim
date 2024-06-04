@@ -18,12 +18,6 @@ return {
         "package%-lock%.json",
       }
       local builtin = require("telescope.builtin")
-      vim.keymap.set("n", "<leader>lg", function()
-        builtin.live_grep({
-          no_ignore = true,
-          file_ignore_patterns = ignore_patterns,
-        })
-      end, { desc = "[L]ive [G]rep" })
       vim.keymap.set("n", "<leader>ff", function()
         builtin.find_files({
           no_ignore = true,
@@ -82,7 +76,7 @@ return {
         }
       }
       telescope.load_extension("live_grep_args")
-      vim.keymap.set("n", "<leader>lga", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
+      vim.keymap.set("n", "<leader>lg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
     end
   }
 }
