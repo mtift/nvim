@@ -33,7 +33,7 @@ return {
         ensure_installed = {
           "html",
           "lua_ls",
-          "phpactor",
+          -- "phpactor",
           "tsserver",
         }
       })
@@ -71,10 +71,10 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities
       })
-      lspconfig.phpactor.setup({
-        capabilities = capabilities,
-        coq.lsp_ensure_capabilities()
-      })
+      -- lspconfig.phpactor.setup({
+      --   capabilities = capabilities,
+      --   coq.lsp_ensure_capabilities()
+      -- })
       lspconfig.tsserver.setup({
         capabilities = capabilities
       })
