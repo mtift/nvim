@@ -71,11 +71,11 @@ return {
     require("dapui").setup()
 
     -- Add some key bindings
-    vim.keymap.set("n", "<Leader>b", dap.toggle_breakpoint, {})
-    vim.keymap.set("n", "<F5>", dap.continue, {})
-    vim.keymap.set("n", "<F10>", dap.step_over, {})
-    vim.keymap.set("n", "<F11>", dap.step_into, {})
-    vim.keymap.set("n", "<F12>", dap.step_out, {})
-    vim.keymap.set("n", "<F6>", dapui.close, {})
+    vim.keymap.set("n", "<Leader>db", dap.toggle_breakpoint, {})
+    vim.keymap.set("n", "<Leader>ds", dap.continue, {})
+    vim.keymap.set("n", "<Leader>do", dap.step_over, {})
+    vim.keymap.set("n", "<Leader>di", dap.step_into, {})
+    vim.keymap.set("n", "<Leader>dt", dap.step_out, {})
+    vim.keymap.set("n", "<Leader>dc", dapui.close, {})
   end,
 }
