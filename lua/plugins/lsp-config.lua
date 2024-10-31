@@ -34,7 +34,7 @@ return {
           "html",
           "lua_ls",
           -- "phpactor",
-          "tsserver",
+          "ts_ls",
         }
       })
 
@@ -75,7 +75,7 @@ return {
       --   capabilities = capabilities,
       --   coq.lsp_ensure_capabilities()
       -- })
-      lspconfig.tsserver.setup({
+      lspconfig.ts_ls.setup({
         capabilities = capabilities
       })
     end
