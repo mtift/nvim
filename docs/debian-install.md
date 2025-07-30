@@ -31,6 +31,13 @@ cd ~/.config
 git clone git@github.com:mtift/nvim.git
 ```
 
+## Open up port 9003
+```
+sudo ufw allow 9003
+```
+
+## Add a launch.json to the .vscode directory
+
 ## Install alacritty (optional)
 ```
 sudo apt -y install alacritty

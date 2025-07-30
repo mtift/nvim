@@ -62,8 +62,9 @@ xdebug.start_with_request=yes
 xdebug.max_nesting_level=1000
 ```
 - To debug with ddev:
+    - `cd /var/www/site_name && mkdir .vscode && cd .vscode`
     - `wget https://ddev.readthedocs.io/en/stable/users/snippets/launch.json`
-    - `ddev xdebug`
+    - `ddev xdebug on`
 
 ## Keyboard shortcuts
 - `<leader>c` - toggle comments for selected lines in normal and visual mode
