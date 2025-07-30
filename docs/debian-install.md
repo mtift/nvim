@@ -4,32 +4,24 @@
 
 ## Download a Nerd Font (any one will do)
 ```
-mkdir /tmp/NerdFont
-cd /tmp/NerdFont
-wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+wget -P ~/.local/share/fonts wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+cd ~/.local/share/fonts
 unzip JetBrainsMono.zip
-mv *ttf ~/.local/share/fonts
+rm JetBrainsMono.zip
 fc-cache -fv
 ```
 
-## Install ripgrep
+## Install LazyVim dependencies
 ```
-cd /tmp
-curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
-sudo dpkg -i ripgrep_13.0.0_amd64.deb
-```
-
-## Install fd
-```
-sudo apt -y install fd-find
+sudo apt install -y fzf
+sudo apt install -y ripgrep
+sudo apt install -y fd-find
+sudo apt install -y lazygit
 ```
 
-## Install latest Neovim
+## Install Neovim
 ```
-cd /tmp
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-sudo rm -rf /opt/nvim
-sudo tar -C /opt -xzf nvim-linux64.tar.gz
+sudo apt install -y neovim
 ```
 
 ## Clone the repo
