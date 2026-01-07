@@ -67,6 +67,7 @@ xdebug.max_nesting_level=1000
     - `ddev xdebug on`
 
 ## Keyboard shortcuts
+- NOTE: `<leader>` is `SPACE`
 - `<leader>c` - toggle comments for selected lines in normal and visual mode
 - `<leader>cc` - toggle comments for selected lines in normal mode
 - `<leader>db>` - debug toggle breakpoint
