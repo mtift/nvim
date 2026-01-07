@@ -77,7 +77,7 @@ xdebug.max_nesting_level=1000
 - `<leader>ds>` - debug start/continue debugging
 - `<leader>dt>` - debug step out
 - `<leader>e` - open neo-tree
-- `<leader>er` - float linting messages that don't wrap
+- `<leader>er` - float linting messages (errors) that don't wrap
 - `<leader>ff` - find files
 - `<leader>ft` - floating terminal show/hide
 - `<leader>gh` - show git history for the current file
